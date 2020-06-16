@@ -6,15 +6,17 @@ end
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0,1,2],  #TOP ROW
-  [3,4,5],  #MIDDLE row
-  [6,7,8],
-  [0,3,6],
-  [1,4,7],
-  [2,5,8],
-  [0,4,8],
-  [6,4,2]
+  [3,4,5],  #MIDDLE ROW
+  [6,7,8],  #BOTTOM ROW
+  [0,3,6],  #LEFT ROW
+  [1,4,7],  #MIDDLE VERTICAL ROW
+  [2,5,8],  #RIGHT ROW
+  [0,4,8],  #DIAGNAL left
+  [6,4,2]  #DIAGNOL right
 ]
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 def won?(board)
-  win_combination_1 = win_combination[0]
-  win_combination_2 = win_combination[1]
+  WIN_COMBINATIONS.each do |win_combo|
+    win_index_1 = win_combo[0]
+    win_index_2 = win_combo[1]
+    win_index_3 = win_combo[2]
