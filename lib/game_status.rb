@@ -38,3 +38,4 @@ end
    board.all? do |index|
      index == "X" || index =="O"
    end
+ end
