@@ -14,3 +14,7 @@ WIN_COMBINATIONS = [
   [0,4,8],
   [6,4,2]
 ]
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+def won?(board)
+  win_combination_1 = win_combination[0]
+  win_combination_2 = win_combination[1]
